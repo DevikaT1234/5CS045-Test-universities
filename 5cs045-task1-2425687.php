@@ -9,4 +9,14 @@
 	
 	// echo ("Connection successful"); 
 	
+	$sql = "SELECT Phone_name, Brand, Price, DATE_FORMAT(Release_date,'%d/%m/%Y') AS formatted_date FROM mobile_phones";
+	
+	$result = $mysqli->query($sql);
+	
+	if (!$result) {
+		die('Data retrieval failed.');
+		exit();
+	}	
+	// echo ("Data retrieval successful"); 
+	
 ?> 
